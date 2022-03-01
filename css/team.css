@@ -1,0 +1,601 @@
+body {
+  background: linear-gradient(#CE7CCF 2%, #64A4EB 20.59%);
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  width: 390px;
+  height: 1163px;
+  border-radius: 0px;
+}
+
+.mainH{
+    position: absolute;
+    width: 149px;
+    height: 39px;
+    left: 130px;
+    top: 55px;
+    
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+    text-shadow: 0px 2px 8px #FD69FF;
+}
+
+/* Menu toggle */
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 10px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: black;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: white;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 20 !important;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: black;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 400px;
+  height: 800px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background-color: #FECFFF;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.whiteB{
+  position: absolute;
+  width: 480px;
+  height: 1050px;
+  left: 0px;
+  top: 113px;
+  bottom: 0px;
+  background: #FFFFFF;
+  border-radius: 16px 16px 0px 0px;
+}
+
+#topH{
+position: absolute;
+width: 387px;
+height: 66px;
+left: 50px;
+top: 10px;
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 33px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+.left1{
+  position: absolute;
+  width: 206px;
+  height: 27px;
+  left: 26px;
+  top: 40px;
+  
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  
+  color: #000000;
+    }
+    .left2{
+  position: absolute;
+  width: 206px;
+  height: 29px;
+  left: 26px;
+  top: 75px;
+  
+  /* H4 Open Sens */
+  
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  /* identical to box height */
+  text-align: center;
+  color: #007B40;
+    }
+    .left3{
+    position: absolute;
+    width: 206px;
+    height: 54px;
+    left: 26px;
+    top: 110px;
+  
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  
+  color: #000000;
+    }
+    .left4{
+      position: absolute;
+  width: 206px;
+  height: 54px;
+  left: 26px;
+  top: 140px;
+  
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  
+  color: #000000;
+    }
+    .card {
+      position:absolute;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 450px;
+      height: 211px;
+      left: 13px;
+      top: 150px;
+      border-radius: 8px;
+      background-color: #FFFFFF;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+    
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    #img1 {
+      box-sizing:border-box;
+      border-radius: 0 5px 5px 0;
+      float:right;
+      height:5rem;
+      width: 190px;
+      height: 211px;
+      left: 206px;
+      top: 0px;
+    }
+    #img2{
+      position: absolute;
+      width: 55.96px;
+      height: 50px;
+      left: 105px;
+      top: 10px;
+    }
+    
+    .container {
+      padding: 2px 16px;
+    }
+  .button1{
+    display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 30px;
+position: absolute;
+width: 120px;
+height: 40px;
+left: 295px;
+bottom: 1rem;
+background: #FFFFFF;
+/* Teamder pink */
+border: 3px solid #E075E1;
+box-sizing: border-box;
+border-radius: 50px;
+box-shadow: 0 8px 16px 0 rgba(194, 23, 185, 0.2);
+  }
+  
+  .leftt1{
+    position: absolute;
+    width: 206px;
+    height: 27px;
+    left: 26px;
+    top: 40px;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    
+    color: #000000;
+      }
+      .leftt2{
+    position: absolute;
+    width: 206px;
+    height: 29px;
+    left: 26px;
+    top: 75px;
+    
+    /* H4 Open Sens */
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 29px;
+    /* identical to box height */
+    text-align: center;
+    color: #007B40;
+      }
+      .leftt3{
+      position: absolute;
+      width: 206px;
+      height: 54px;
+      left: 26px;
+      top: 110px;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #000000;
+      }
+      .leftt4{
+        position: absolute;
+    width: 206px;
+    height: 54px;
+    left: 26px;
+    top: 140px;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #000000;
+      }
+      .card2 {
+        position:absolute;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 450px;
+        height: 211px;
+        left: 13px;
+        top: 420px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+      
+      }
+      
+      .card2:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      
+      #imgg1 {
+        box-sizing:border-box;
+        border-radius: 0 5px 5px 0;
+        float:right;
+        height:5rem;
+        width: 190px;
+        height: 211px;
+        left: 206px;
+        top: 0px;
+      }
+      #imgg2{
+        position: absolute;
+        width: 55.96px;
+        height: 50px;
+        left: 105px;
+        top: 10px;
+      }
+      
+      .container {
+        padding: 2px 16px;
+      }
+    .button1{
+      display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 30px;
+  
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  left: 295px;
+  bottom: 1rem;
+  background: #FFFFFF;
+  /* Teamder pink */
+  border: 3px solid #E075E1;
+  box-sizing: border-box;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px 0 rgba(194, 23, 185, 0.2);
+    }
+
+    .lefttt1{
+      position: absolute;
+      width: 206px;
+      height: 27px;
+      left: 26px;
+      top: 40px;
+      
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      
+      color: #000000;
+        }
+        .lefttt2{
+      position: absolute;
+      width: 206px;
+      height: 29px;
+      left: 26px;
+      top: 75px;
+      
+      /* H4 Open Sens */
+      
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 29px;
+      /* identical to box height */
+      text-align: center;
+      color: #007B40;
+        }
+        .lefttt3{
+        position: absolute;
+        width: 206px;
+        height: 54px;
+        left: 26px;
+        top: 110px;
+      
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      
+      color: #000000;
+        }
+        .lefttt4{
+          position: absolute;
+      width: 206px;
+      height: 54px;
+      left: 26px;
+      top: 140px;
+      
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      
+      color: #000000;
+        }
+        .card3 {
+          position:absolute;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          width: 450px;
+          height: 211px;
+          left: 13px;
+          top: 688px;
+          border-radius: 8px;
+          background-color: #FFFFFF;
+        
+        }
+        
+        .card3:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        
+        #imggg1 {
+          box-sizing:border-box;
+          border-radius: 0 5px 5px 0;
+          float:right;
+          height:5rem;
+          width: 190px;
+          height: 211px;
+          left: 206px;
+          top: 0px;
+        }
+        #imggg2{
+          position: absolute;
+          width: 55.96px;
+          height: 50px;
+          left: 105px;
+          top: 10px;
+        }
+        
+        .container {
+          padding: 2px 16px;
+        }
+      .button1{
+        display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 10px 30px;
+    
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    left: 295px;
+    bottom: 1rem;
+    background: #FFFFFF;
+    /* Teamder pink */
+    border: 3px solid #E075E1;
+    box-sizing: border-box;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(194, 23, 185, 0.2);
+      }
+      .buttonB{
+        display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+padding: 6px;
+position: absolute;
+width: 230px;
+height: 49px;
+left: 120px;
+bottom: -180px;
+
+background: #FFFFFF;
+/* Teamder pink */
+
+border: 3px solid #E075E1;
+box-sizing: border-box;
+border-radius: 50px;
+
+
+      }
+.text{
+  font-size: 1.2rem;
+  text-align: center;
+  padding-left: 22px;
+  font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+  
+}
+

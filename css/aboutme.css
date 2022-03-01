@@ -1,0 +1,521 @@
+body {
+  background-image: url("../img/13\ Pro\ -\ 40.jpg"); 
+  background-repeat: no-repeat;
+}
+
+
+/* Menu toggle */
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 10px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: black;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: white;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 20 !important;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: black;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 400px;
+  height: 800px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background-color: #FECFFF;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+
+.mainH{
+  position: absolute;
+  width: 149px;
+  height: 39px;
+  left: 140px;
+  top: 40px;
+    
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    text-shadow: 0px 2px 4px #07447C;
+}
+.whiteB{
+    position: absolute;
+    width: 500px;
+    height: 93rem;
+    left: 1px;
+    top: 113px;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+#nav{
+  max-width:500px;
+  padding:1em 0; 
+  margin-top: 4rem;
+}
+
+.dot:hover {
+  background-color: #3D50FC;
+  cursor: pointer;
+}
+
+.find{
+  position: absolute;
+  width: 347px;
+  height: 49px;
+  left: 144px;
+  top: -20px;
+/* H2 Open Sen */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 49px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+
+.detailsA{
+  position: absolute;
+  width: 500px;
+  height: 87px;
+  left: 0px;
+  top: 120px;
+
+/* H4 Open Sens */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size:40px;
+line-height: 40px;
+text-align: center;
+
+color: #000000;
+}
+
+.detailsB{
+
+  position: absolute;
+  width: 200px;
+  height: 33px;
+  left: 150px;
+  top: 340px;
+  
+  /* H4 Open San HiFi */
+  
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 33px;
+  /* identical to box height */
+  
+  
+  color: #000000;
+
+}
+
+#name1{
+padding: 0px 10px;
+position: absolute;
+width: 72px;
+left: 40px;
+top: 400px;
+font-size: 30px;
+}
+#name2{
+  position: absolute;
+  width: 470px;
+  height: 17px;
+  left: 18px;
+  top: 450px;
+
+  
+  /* black outline 12% */
+  
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+#namee1{
+  padding: 0px 10px;
+  position: absolute;
+  width: 72px;
+  left: 40px;
+  top: 550px;
+  font-size: 30px;
+  }
+  #namee2{
+    position: absolute;
+    width: 470px;
+    height: 17px;
+    left: 18px;
+    top: 600px;
+  
+    
+    /* black outline 12% */
+    
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  #nameee1{
+    padding: 0px 10px;
+    position: absolute;
+    width: 300px;
+    left: 40px;
+    top: 710px;
+    font-size: 30px;
+    }
+    #nameee2{
+      position: absolute;
+      width: 470px;
+      height: 17px;
+      left: 18px;
+      top: 760px;
+    
+      
+      /* black outline 12% */
+      
+      border: 2px solid rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+
+.parag{
+  /* 7. A little about me */
+position: absolute;
+width: 226px;
+height: 33px;
+left: 125px;
+top: 900px;
+
+/* H4 Open San HiFi */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.paragH{
+  position: absolute;
+  width: 470px;
+  height: 87px;
+  left: 10px;
+  top: 60rem;
+
+/* H4 Open Sens */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 29px;
+text-align: justify;
+
+color: #000000;
+}
+
+img{
+  position: absolute;
+width: 254px;
+left: 15px;
+top: 80rem;
+
+}
+.bottomH{
+  position: absolute;
+  width: 254px;
+  left: 15px;
+  top: 80em;
+  width: 470px;
+    height: 17px;
+}
+
+.buttonB{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1px 25px;
+position: absolute;
+width: 100px;
+height: 40px;
+left: 100px;
+bottom: 2px;
+background: #FFFFFF;
+/* Teamder pink */
+border: 3px solid #E075E1;
+box-sizing: border-box;
+border-radius: 50px;
+box-shadow: 0 8px 16px 0 rgba(194, 23, 185, 0.2);
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 21px;
+line-height: 29px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+
+}
+
+.buttonC{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1px 25px;
+position: absolute;
+width: 205px;
+height: 40px;
+left: 250px;
+bottom: 2px;
+background: #FFFFFF;
+/* Teamder pink */
+border: 3px solid #E075E1;
+box-sizing: border-box;
+border-radius: 50px;
+box-shadow: 0 8px 16px 0 rgba(194, 23, 185, 0.2);
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 21px;
+line-height: 29px;
+background: #E075E1;
+}
+
+
+.dotA {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+  background: #B1D0FF;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: background-color 0s ease-out;
+  -moz-transition: background-color 0s ease-out;
+  -o-transition: background-color 0s ease-out;
+  transition: background-color 0s ease-out;
+ 
+}
+.dotB{
+  height: 25px;
+  width: 25px;
+  background-color: #B1D0FF;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+}
+.dotC{
+  height: 25px;
+  width: 25px;
+  background-color: #B1D0FF;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+}
+.dotD{
+  height: 25px;
+  width: 25px;
+  background-color: #B1D0FF;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+}
+.dotE {
+  height: 25px;
+  width: 25px;
+  background-color: #B1D0FF;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+}
+.dotF {
+  height: 25px;
+  width: 25px;
+  background-color: #B1D0FF;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 50px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: 30px;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 3rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  
+  }
+  
+
+  
